@@ -17,7 +17,7 @@ class PongPlayer(PyGamePlayer):
 
     def get_feedback(self):
         # import must be done here because otherwise importing would cause the game to start playing
-        from games.pong import bar1_score, bar2_score 
+        from pong import bar1_score, bar2_score 
 
         # get the difference in score between this and the last run
         score_change = (bar1_score - self.last_bar1_score) - (bar2_score - self.last_bar2_score)
@@ -29,7 +29,7 @@ class PongPlayer(PyGamePlayer):
     def start(self):
         super(PongPlayer, self).start()
 
-        import games.pong
+        import pong
 
 
 if __name__ == '__main__':
